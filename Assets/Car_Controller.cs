@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Volplane;
+using Volplane.AirConsole;
 
 [RequireComponent(typeof(Collider2D))]
 public class Car_Controller : VolplaneBehaviour {
@@ -54,6 +55,7 @@ public class Car_Controller : VolplaneBehaviour {
     }
 
     Vector2 ForwardVelocity() {
+        VolplaneController.AirConsole.SetOrientation("landscape");
         return transform.up * Vector2.Dot(GetComponent<Rigidbody2D>().velocity, transform.up);
     }
 

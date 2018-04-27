@@ -1213,6 +1213,9 @@ VolplaneController.prototype.init = function(standardView, controllerData) {
                              instance.controllerObject.deviceMotionInterval :
                              undefined
         });
+		
+		//instance.airconsole.setOrientation("landscape");
+		console.log("CAN I SEE THIS?");
 
         instance.rateLimiter = new RateLimiter(instance.airconsole);
 
@@ -1263,6 +1266,10 @@ VolplaneController.prototype.init = function(standardView, controllerData) {
             instance.active = data.volplane.active[instance.airconsole.getDeviceId()];
 
         };
+
+		instance.airconsole.onOrientationChange  = function(orientation){
+			instance.airconsole.setOrientation(orientation);
+		}
 
         // Callback function - onMessage event
         instance.airconsole.onMessage = function(deviceId, data) {

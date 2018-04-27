@@ -116,7 +116,7 @@
         {
           "type": "button",
           "name": "buttonUp",
-          "width": 100,
+          "width": 50,
           "height": 50,
           "x": 0,
           "y": 0,
@@ -131,7 +131,7 @@
         {
           "type": "button",
           "name": "buttonDown",
-          "width": 100,
+          "width": 50,
           "height": 50,
           "x": 0,
           "y": 50,
@@ -142,49 +142,42 @@
           "fontSize": 24,
           "fontColor": "rgb(248, 248, 236)",
           "highlightImage": "img/button-big-highlight.png"
+        },
+        {
+          "type": "button",
+          "name": "buttonRight",
+          "width": 50,
+          "height": 50,
+          "x": 50,
+          "y": 0,
+          "image": "img/button-big.png",
+          "hidden": false,
+          "text": "Right",
+          "font": "",
+          "fontSize": 24,
+          "fontColor": "rgb(248, 248, 236)",
+          "highlightImage": "img/button-highlight.png"
+        },
+        {
+          "type": "button",
+          "name": "buttonLeft",
+          "width": 50,
+          "height": 50,
+          "x": 50,
+          "y": 50,
+          "image": "img/button-big.png",
+          "hidden": false,
+          "text": "Left",
+          "font": "",
+          "fontSize": 24,
+          "fontColor": "rgb(248, 248, 236)",
+          "highlightImage": "img/button-big-highlight.png"
         }
       ],
       "gridX": 5,
       "gridY": 5,
       "color": "rgb(31, 29, 42)",
       "image": "img/transparent.png"
-    },
-    "player1": {
-      "content": [
-        {
-          "type": "button",
-          "name": "buttonUp",
-          "width": 50,
-          "height": 100,
-          "x": 0,
-          "y": 0,
-          "image": "img/button-big.png",
-          "hidden": false,
-          "text": "",
-          "font": "",
-          "fontSize": 12,
-          "fontColor": "rgb(248, 248, 236)",
-          "highlightImage": "img/button-big-highlight.png"
-        },
-        {
-          "type": "button",
-          "name": "buttonRight",
-          "width": 50,
-          "height": 100,
-          "x": 50,
-          "y": 0,
-          "image": "img/button-big.png",
-          "hidden": false,
-          "text": "",
-          "font": "",
-          "fontSize": 12,
-          "fontColor": "rgb(248, 248, 236)",
-          "highlightImage": "img/button-big-highlight.png"
-        }
-      ],
-      "gridX": 5,
-      "gridY": 5,
-      "color": "rgb(31, 29, 42)"
     }
   },
   "fontList": [
@@ -197,5 +190,5 @@
   "layout": "portrait",
   "synchronizeTime": true,
   "deviceMotion": false,
-  "lastEdit": 1524774993
+  "lastEdit": 1524773753
 }

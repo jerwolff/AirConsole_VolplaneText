@@ -296,6 +296,27 @@ namespace Volplane.AirConsole
             sendData.Length = 0;
         }
 
+        public void SetOrientation (string orientation) {
+            if (!IsConnectionReady("setOrientation()"))
+                return;
+
+            using (var sw = new StringWriter(sendData))
+            using (var writer = new JsonTextWriter(sw)) {
+                // Use buffer
+                writer.ArrayPool = JSONArrayPool.Instance;
+
+                writer.WriteStartObject();
+                writer.WritePropertyName("setOrientation");
+                writer.WriteValue("broadcast");
+                writer.WritePropertyName("data");
+                writer.WriteRawValue(orientation);
+                writer.WriteEnd();
+            }
+            controllerSingleton.Send(sendData.ToString());
+            sendData.Length = 0;
+            Debug.Log("Uh Oh");
+        }
+
         /// <summary>
         /// AirConsole API: getControllerDeviceIds function.
         /// See <see href="https://developers.airconsole.com/#!/api">https://developers.airconsole.com/#!/api</see>

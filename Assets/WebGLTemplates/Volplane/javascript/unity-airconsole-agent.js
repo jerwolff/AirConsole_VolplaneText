@@ -196,6 +196,9 @@ Agent.prototype.initAirConsole = function() {
 
     instance.airconsole = new AirConsole({ 'synchronize_time': true });
 
+	//instance.airconsole.setOrientation("landscape");
+	console.log("CAN I SEE THIS?");
+
     instance.airconsole.onConnect = function(device_id) {
         instance.sendToUnity({
             'action': 'onConnect',
